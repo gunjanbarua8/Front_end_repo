@@ -32,10 +32,10 @@
     <link href="css/style.css" rel="stylesheet">
     <style>
            .page-header {
-    background: url(../img/banner12.png) center center / cover no-repeat;
+    background: url(../img/event_org.png) center center / cover no-repeat;
     margin-top: 3rem;
     padding-top: 5rem;
-    height: 80vh;
+    height: 50vh;
 }
 
 
@@ -106,24 +106,28 @@
     </nav>
     <!-- Navbar End -->
 
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white mb-4 animated slideInDown">Events</h1>
+        
+        </div>
+    </div>
+
 
     <div class="container-fluid">
+
+        
+
         <div class="row">
-            <div class="col-lg-6 ">
-                <!-- Page Header Start -->
-                <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-                    
-                </div>
-                
-                <!-- Page Header End -->
-            </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <!-- Contact Start -->
                 <div class="container-xxl py-5">
                     <div class="container">
                         <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                            <p class="section-title bg-white text-center text-primary px-3">Tag A Tree</p>
-                            <h1 class="mb-5">Fill in the details of the tree</h1>
+                            <p class="section-title bg-white text-center text-primary px-3">
+                                Host an Event
+                            </p>
+                            <h1 class="mb-5">Do you want to make a huge impact?</h1>
                         </div>
                         <div class="row g-5">
                             <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
@@ -131,41 +135,86 @@
                                     <div class="row g-3">
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="name"  placeholder="name" required>
-                                                <label for="name">Name Of The Tree<span class="required">*</span></label>
+                                                <input type="text" class="form-control" id="event-name" name="event-name" placeholder="Event Name" required>
+                                                <label for="event-name">Name of the Event<span class="required">*</span></label>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="species"  placeholder="species">
-                                                <label for="species">Species</label>
+                                                <textarea class="form-control" id="event-description" name="event-description" placeholder="Description"></textarea>
+                                                <label for="event-description">Description</label>
                                             </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating">
+                                                <input type="date" class="form-control" id="event-date" name="event-date" required>
+                                                <label for="event-date">Date of the Event<span class="required">*</span></label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="event-time" name="event-time" placeholder="Time" required>
+                                            <label for="event-time">Time</label>
+                                        </div>
+                                    </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating">
+                                                <select class="form-select" id="event-time-period" name="event-time-period">
+                                                    <option value="am">AM</option>
+                                                    <option value="pm">PM</option>
+                                                </select>
+                                                <label for="event-time-period">AM/PM</label>        
+                                                                                </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control" id="benefits"  placeholder="benefits">
-                                                <label for="benefits">Medicinal Benefits</label>
+                                                <input type="text" class="form-control" id="event-location" name="event-location" placeholder="Event Location">
+                                                <label for="event-location">Location of the Event</label>
                                             </div>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-12">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="event-type" id="individual" value="individual" checked>
+                                                <label class="form-check-label" for="individual">Individual</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="event-type" id="organization" value="organization">
+                                                <label class="form-check-label" for="organization">Organization</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" id="ngos-list" style="display: none;">
                                             <div class="form-floating">
-                                                <input type="file" class="form-control" id="picture"  accept="image/*" required>
-                                                <label for="picture">Upload Picture<span class="required">*</span></label>
+                                                <select class="form-select" id="event-organization" name="event-organization">
+                                                    <option value="" selected disabled>Select an Organization</option>
+                                                    <option value="ngo1">NGO 1</option>
+                                                    <option value="ngo2">NGO 2</option>
+                                                    <option value="ngo3">NGO 3</option>
+                                                    <option value="ngo4">NGO 4</option>
+                                                </select>
+                                                <label for="event-organization">Organization</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" id="other-organization" style="display: none;">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="other-organization-name" name="other-organization-name" placeholder="Other Organization">
+                                                <label for="other-organization-name">Other Organization</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row g-3 pt-3">
                                         <div class="col-12">
-                                            <button class="btn btn-secondary rounded-pill py-3 px-5" type="submit">Submit</button>
+                                            <button class="btn btn-secondary rounded-pill py-3 px-5" type="submit">Register</button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 <!-- Contact End -->
             </div>
+         
             
             
         </div>
@@ -253,6 +302,29 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        const organizationRadio = document.getElementById("organization");
+        const ngosList = document.getElementById("ngos-list");
+        const otherOrganization = document.getElementById("other-organization");
+    
+        organizationRadio.addEventListener("change", function() {
+            if (this.checked) {
+                ngosList.style.display = "block";
+                otherOrganization.style.display = "block";
+            }
+        });
+    
+        const individualRadio = document.getElementById("individual");
+    
+        individualRadio.addEventListener("change", function() {
+            if (this.checked) {
+                ngosList.style.display = "none";
+                otherOrganization.style.display = "none";
+            }
+        });
+    </script>
+    
+    
 </body>
 
 </html>

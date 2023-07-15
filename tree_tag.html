@@ -50,33 +50,12 @@
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-0">
-        <div class="row g-0 d-none d-lg-flex">
-            <div class="col-lg-6 ps-5 text-start">
-                <div class="h-100 d-inline-flex align-items-center text-light">
-                    <span>Follow Us:</span>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-end">
-                <div class="h-100 bg-secondary d-inline-flex align-items-center text-dark py-2 px-4">
-                    <span class="me-2 fw-semi-bold"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span>+012 345 6789</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0">Milky</h1>
+            <h1 class="m-0">Sanjeevani</h1>
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -121,49 +100,130 @@
                 <!-- Contact Start -->
                 <div class="container-xxl py-5">
                     <div class="container">
-                        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                            <p class="section-title bg-white text-center text-primary px-3">Tag A Tree</p>
-                            <h1 class="mb-5">Fill in the details of the tree</h1>
-                        </div>
-                        <div class="row g-5">
-                            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-                                <form action="/submit-form" method="POST">
-                                    <div class="row g-3">
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="name"  placeholder="name" required>
-                                                <label for="name">Name Of The Tree<span class="required">*</span></label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="species"  placeholder="species">
-                                                <label for="species">Species</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="benefits"  placeholder="benefits">
-                                                <label for="benefits">Medicinal Benefits</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-floating">
-                                                <input type="file" class="form-control" id="picture"  accept="image/*" required>
-                                                <label for="picture">Upload Picture<span class="required">*</span></label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row g-3 pt-3">
-                                        <div class="col-12">
-                                            <button class="btn btn-secondary rounded-pill py-3 px-5" type="submit">Submit</button>
-                                        </div>
-                                    </div>
-                                </form>
+                      <div
+                        class="text-center mx-auto wow fadeInUp"
+                        data-wow-delay="0.1s"
+                        style="max-width: 500px"
+                      >
+                        <p class="section-title bg-white text-center text-primary px-3">
+                          Fill in the details
+                        </p>
+                        <h1 class="mb-5">Tag A Tree</h1>
+                      </div>
+                      <div class="row g-5">
+                        <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                          <form action="/submit-form" method="POST">
+                            <div class="row g-3">
+                              <div class="col-md-6">
+                                <div class="form-floating">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="name"
+                                    required
+                                  />
+                                  <label for="name"
+                                    >Name Of The Tree<span class="required"
+                                      >*</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-floating">
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="name"
+                                    required
+                                  />
+                                  <label for="name"
+                                    >Age Of The Tree<span class="required"
+                                      >*</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-floating">
+                                  <select
+                                    class="form-control"
+                                    id="species"
+                                    name="species"
+                                    required
+                                  >
+                                    <option value="neem">Neem</option>
+                                    <option value="banyan">Banyan</option>
+                                    <option value="teak">Teak</option>
+                                    <option value="peepal">Peepal</option>
+                                    <option value="jamun">Jamun</option>
+                                  </select>
+                                  <label for="species">Species*</label>
+                                </div>
+                              </div>
+                              <div class="col-">
+                                <div class="form-floating">
+                                  <div class="form-floating">
+                                    <select
+                                      class="form-control"
+                                      id="benefits"
+                                      name="benefits"
+                                      required
+                                    >
+                                      <option value="neem">Medicinal</option>
+                                      <option value="banyan">
+                                        Symbolic significance
+                                      </option>
+                                      <option value="teak">Furniture building</option>
+                                      <option value="peepal">Oxygen producer</option>
+                                      <option value="jamun">Fruit-bearing</option>
+                                    </select>
+                                    <label for="benefits">Unique Feature*</label>
+                                  </div>
+                                  <!-- <input
+                                    type="text"
+                                    class="form-control"
+                                    id="benefits"
+                                    placeholder="benefits"
+                                    required
+                                  />
+                                  <label for="benefits">Unique Feature*</label> -->
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-floating">
+                                  <input
+                                    type="file"
+                                    class="form-control"
+                                    id="picture"
+                                    accept="image/*"
+                                    required
+                                  />
+                                  <label for="picture"
+                                    >Upload Picture<span class="required"
+                                      >*</span
+                                    ></label
+                                  >
+                                </div>
+                              </div>
                             </div>
+                            <div class="row g-3 pt-3">
+                              <div class="col-12">
+                                <button
+                                  class="btn btn-secondary rounded-pill py-3 px-5"
+                                  type="submit"
+                                >
+                                  Submit
+                                </button>
+                              </div>
+                            </div>
+                          </form>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
                 <!-- Contact End -->
             </div>
             
@@ -177,10 +237,12 @@
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
+                </div>
+                <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Address</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>987654321</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>abc@gmail.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
@@ -191,49 +253,16 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
                     <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Our Events</a>
                     <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Business Hours</h5>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
-
-    <!-- Copyright Start -->
-    <div class="container-fluid bg-secondary text-body copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Copyright End -->
 
 
     <!-- Back to Top -->

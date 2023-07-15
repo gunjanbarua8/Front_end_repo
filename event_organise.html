@@ -194,6 +194,12 @@
                                                 <label for="event-organization">Organization</label>
                                             </div>
                                         </div>
+                                        <div class="col-12" id="other-organization" style="display: none;">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="other-organization-name" name="other-organization-name" placeholder="Other Organization">
+                                                <label for="other-organization-name">Other Organization</label>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="row g-3 pt-3">
                                         <div class="col-12">
@@ -299,12 +305,12 @@
     <script>
         const organizationRadio = document.getElementById("organization");
         const ngosList = document.getElementById("ngos-list");
+        const otherOrganization = document.getElementById("other-organization");
     
         organizationRadio.addEventListener("change", function() {
             if (this.checked) {
                 ngosList.style.display = "block";
-            } else {
-                ngosList.style.display = "none";
+                otherOrganization.style.display = "block";
             }
         });
     
@@ -313,9 +319,12 @@
         individualRadio.addEventListener("change", function() {
             if (this.checked) {
                 ngosList.style.display = "none";
+                otherOrganization.style.display = "none";
             }
         });
     </script>
+    
+    
 </body>
 
 </html>

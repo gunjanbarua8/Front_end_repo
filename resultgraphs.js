@@ -1,21 +1,55 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Line Graph Data
-  const lineGraphData = [
+  const barGraphData = [
+    {
+      name: 'Area',
+      data: [500, 700, 600, 800, 600] // Replace with actual area data
+    },
+    {
+      name: 'Age of Plants',
+      data: [316, 42, 65, 36, 84] // Replace with actual age of plants data
+    },
+    {
+      name: 'Fruit Bearing Plants',
+      data: [65, 156, 175, 417, 619] // Replace with actual fruit bearing plants data
+    },
     {
       name: 'Fertility of Soil',
-      data: [5, 7, 6, 8, 6]
-    },
-    {
-      name: 'Rare Plants',
-      data: [3, 4, 5, 6, 4]
-    },
-    {
-      name: 'Fruit Bearing Crops',
-      data: [6, 5, 7, 4, 6]
+      data: [25, 147, 666, 78, 66] // Replace with actual fertility of soil data
     }
   ];
 
-  // Line Graph Options
+  const barGraphOptions = {
+    chart: {
+      type: 'bar',
+      height: 400,
+    },
+    series: barGraphData,
+    xaxis: {
+      categories: ['MG Road', 'Indiranagar', 'Koramangala', 'Whitefield', 'Jayanagar'], // Replace with actual place names
+    },
+    yaxis: {
+      title: {
+        text: 'Value',
+      },
+    },
+    colors: ['#2980B9', '#FF9F00', '#4CAF50', '#FF6384'], // Assign different colors to each bar
+    title: {
+      text: 'Internal Analysis in Bengaluru',
+      align: 'center',
+    },
+  };
+
+  const barGraph = new ApexCharts(document.querySelector("#bar-graph"), barGraphOptions);
+  barGraph.render();
+  
+  const lineGraphData = [
+    {
+      name: 'Species of Plants',
+      data: [80, 50, 72, 62, 91] // Replace with actual data for species of plants
+    }
+    // Add more data for other lines if needed
+  ];
+
   const lineGraphOptions = {
     chart: {
       type: 'line',
@@ -23,16 +57,16 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     series: lineGraphData,
     xaxis: {
-      categories: ['Bengaluru', 'Mysuru', 'Hubli', 'Mangaluru', 'Belagavi'], // Replace with actual place names
+      categories: ['MG Road', 'Indiranagar', 'Koramangala', 'Whitefield', 'Jayanagar'], // Replace with actual place names
     },
     yaxis: {
       title: {
-        text: 'Value',
+        text: 'Number of Species',
       },
     },
-    colors: ['#2980B9', '#FF9F00', '#4CAF50'], // Customize the colors as needed
+    colors: ['#FF6384'], // Customize the color as needed
     title: {
-      text: ' ',
+      text: 'Species',
       align: 'center',
     },
   };
@@ -40,67 +74,22 @@ document.addEventListener("DOMContentLoaded", function() {
   const lineGraph = new ApexCharts(document.querySelector("#line-graph"), lineGraphOptions);
   lineGraph.render();
 
-  // Bar Graph Data
-  const barGraphData = [15, 20, 18, 12, 10];
+  const pieGraphData = [35, 20, 10, 15, 20]; // Replace with actual data for pie graph
 
-  // Bar Graph Options
-  const barGraphOptions = {
+  const pieGraphOptions = {
     chart: {
-      type: 'bar',
+      type: 'pie',
       height: 400,
     },
-    series: [{
-      name: 'Number of Ponds',
-      data: barGraphData,
-    }],
-    xaxis: {
-      categories: ['Bengaluru', 'Mysuru', 'Hubli', 'Mangaluru', 'Belagavi'], // Replace with actual place names
-    },
-    yaxis: {
-      title: {
-        text: 'Number of Ponds',
-      },
-    },
-    colors: ['#FF6384'], // Customize the color as needed
+    series: pieGraphData,
+    labels: ['Banyan', 'Peepal', 'Teak', 'Neem', 'Jamun'], // Replace with actual species names
+    colors: ['#FF6384', '#36A2EB', '#FFCE56', '#FF9F00', '#4CAF50'], // Assign different colors to each slice
     title: {
-      text: 'Ponds in Each Region',
+      text: 'Species Distribution',
       align: 'center',
     },
   };
 
-  const barGraph = new ApexCharts(document.querySelector("#bar-graph"), barGraphOptions);
-  barGraph.render();
-
-  // Species Graph Data
-  const speciesGraphData = [
-    {
-      name: 'Species',
-      data: ['Species A', 'Species B', 'Species C', 'Species D', 'Species E'] // Replace with actual species data
-    }
-  ];
-
-  // Species Graph Options
-  const speciesGraphOptions = {
-    chart: {
-      type: 'line',
-      height: 400,
-    },
-    series: speciesGraphData,
-    xaxis: {
-      categories: ['Bengaluru', 'Mysuru', 'Hubli', 'Mangaluru', 'Belagavi'], // Replace with actual place names
-    },
-    yaxis: {
-      title: {
-        text: 'Species',
-      },
-    },
-    colors: ['#4CAF50'], // Customize the color as needed
-    title: {
-      text: 'Species of Plants in Each Region',
-      align: 'center',
-    },
-  };
-
-  const speciesGraph = new ApexCharts(document.querySelector("#species-graph"), speciesGraphOptions);
-  speciesGraph.render();
+  const pieGraph = new ApexCharts(document.querySelector("#pie-graph"), pieGraphOptions);
+  pieGraph.render();
 });

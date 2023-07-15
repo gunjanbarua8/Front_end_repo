@@ -7,37 +7,21 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container mt-5 pt-5">
-        <div class="row">
-          <div class="col-6 d-flex flex-column justify-content-center">
-            
-            <div id="line-graph"></div>
-           
-          </div>
-          <div class="col-6 d-flex flex-column justify-content-center">
-            <div id="species-graph"></div>
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-6 d-flex flex-column justify-content-center">
-            <h2 class="text-center">Ponds in Each Region</h2>
-            <ul>
-                <li>Bengaluru: Bengaluru's fertile soil benefits from a well-developed water resource management system, including lakes, reservoirs, and underground water sources.</li>
-                <li>Mysuru: Mysuru's agricultural fertility is supported by the Cauvery River and its tributaries, ensuring reliable water supply for irrigation.</li>
-                <li>Hubli: Hubli's fertility is attributed to the presence of the Krishna River, which facilitates irrigation and sustains agricultural productivity.</li>
-                <li>Mangaluru: Mangaluru's coastal location benefits from the proximity to the Arabian Sea, ensuring adequate water resources for agriculture and horticulture.</li>
-                <li>Belagavi: Belagavi's fertile soil is nourished by rivers like Krishna and Ghataprabha, providing water for irrigation and promoting agricultural growth.</li>
-              </ul>
-          </div>
-          <div class="col-6 d-flex flex-column justify-content-center">
-          
-            <div id="bar-graph"></div>
-    
-          </div>
-        </div>
+  <div class="container mt-5 pt-5">
+    <div class="row">
+      <div class="col-4 d-flex flex-column justify-content-center">
+        <div id="line-graph"></div>
       </div>
-      
+      <div class="col-4 d-flex flex-column justify-content-center">
+        <div id="pie-graph"></div>
+      </div>
+      <div class="col-4 d-flex flex-column justify-content-center">
+        <div id="bar-graph"></div>
+      </div>
+    
+    </div>
+    <br>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.min.js"></script>
   <script src="resultgraphs.js"></script>

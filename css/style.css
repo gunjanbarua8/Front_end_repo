@@ -9,7 +9,7 @@
 .back-to-top {
     position: fixed;
     display: none;
-    right: 30px;
+    left: 30px;
     bottom: 30px;
     z-index: 99;
 }
@@ -501,3 +501,5 @@
     letter-spacing: 1px;
     box-shadow: none;
 }
+
+
